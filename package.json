@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --experimental-json-modules src/",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --coverage",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --watchAll"
   },
   "keywords": [],
   "author": "",
